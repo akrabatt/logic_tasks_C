@@ -1,18 +1,18 @@
 CC = gcc
 CFLAGS = -g
-OBJFLAGS = -c
+OBJFLAG = -c
 OFLAG = -o
-OBJS = main.o sort.o
+OBJS = main.o palindrome.o
 TARGET = main
 
 $(TARGET): $(OBJS)
-	$(CC) $(CFLAGS) $(OFLAG) $(TARGET) $(OBJS)
+	$(CC) $(CFLAG) $(OFLAG) $(TARGET) $(OBJS)
 
 main.o: main.c
 	$(CC) $(CFLAGS) $(OBJFLAG) main.c
 
-sort.o: sort.c
-	$(CC) $(CFLAGS) $(OBJFLAG) sort.c
+palindrome.o: palindrome.c
+	$(CC) $(CFLAGS) $(OBJFLAG) palindrome.c
 
 clean:
 	rm -rf $(TARGET) $(OBJS)
