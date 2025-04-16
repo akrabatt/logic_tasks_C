@@ -7,6 +7,6 @@
 bool is_palindrome(const char arr[], int size);
 
 // sheck is inboun char character
-bool is_alphab(char alph);
+bool is_alphab(char *alph);
 
 #endif
